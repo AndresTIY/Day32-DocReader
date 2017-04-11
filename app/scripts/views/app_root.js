@@ -1,11 +1,10 @@
 import React from 'react'
+import DocumentView from './document_view'
 
 export default React.createClass({
   render: function () {
     return (
-      <section>
-        <h1>Whoa!</h1>
-      </section>
+      <DocumentView />
     );
   }
 });

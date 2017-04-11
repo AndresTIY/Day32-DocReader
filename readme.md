@@ -9,8 +9,8 @@
 - Use redux architecture, as in Reducer and Actions
 
 ### Checkboxes!
-- [ ] Create views for document
-- [ ] Create a "Mark as Read" checkbox
+- [x] Create views for document
+- [x] Create a "Mark as Read" checkbox
 - [ ] Checkbox Actions when checked:
   - [ ] Prompt for confirm
     - [ ] Two Options, Cancel and confirm
@@ -26,3 +26,7 @@
 if checkbox clicked - > open prompt window
 when cancel is clicked, close prompt window, uncheck checkbox
 when confirm is clicked, close prompt window, disable checkbox
+
+Action: click checkbox, cancel action, confirm action
+Component: view for document, view for prompt window
+Reducer: switch statement..

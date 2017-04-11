@@ -4,3 +4,20 @@ body {
   color: $color-darkgreen;
 
 }
+.doc {
+  border: 1px solid $color-lightgreen;
+  width: 80%;
+  margin: 5rem auto;
+}
+article {
+  margin: .5rem;
+}
+
+.inputDiv{
+  text-align: right;
+  color: #000000;
+
+}
+.hidden {
+  display: none;
+}
