@@ -1,5 +1,14 @@
 import React from 'react'
-import checkbox from '../actions/checkbox.js'
+// import checkbox from '../actions/checkbox.js'
+import reducer from '../reducers/reducer.js'
+import store from '../store.js'
+
+
+// checkedAction = function () {
+//   return {
+//     type: "CHECKED"
+//   }
+// }
 
 
 const InputView = React.createClass({
@@ -9,11 +18,9 @@ const InputView = React.createClass({
     console.log(this.refs.read.checked);
 
 
-    // if (this.refs.read.checked){
-    //   store.dispatch(type: "CHECKED")
-    // } else if (!this.refs.read.checked) {
-    //   store.dispatch(type: "NOT_CHECKED")
-    // }
+    if (this.refs.read.checked){
+      store.dispatch({type: "CHECKED"})
+    }
 
   },
 
