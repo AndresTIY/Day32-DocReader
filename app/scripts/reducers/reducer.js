@@ -4,7 +4,7 @@ import logger from '../middleware/logger.js'
 import store from '../store.js'
 
 const initialState = {
-  checked: false
+  checked: true
 }
 
 export default function reducer (currentState, action) {

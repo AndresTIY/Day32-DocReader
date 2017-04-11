@@ -1,12 +1,35 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import allState from '../containers/all.js'
+import allState from '../containers/all'
 import DocumentView from './document_view'
+import PromptView from './prompt_view'
 
 const App = React.createClass({
+
+  place: function(){
+    if (this.props.checked){
+      console.log('yay');
+    }
+  },
+
+
+
   render: function () {
+    let divClass = 'show-content';
+    if (!this.props.checked){
+      divClass = 'hidden';
+    }
+
+
     return (
-      <DocumentView />
+      <div>
+        <DocumentView />
+        <div className={divClass}>
+          <PromptView />
+        </div>
+
+      </div>
+
     );
   }
 });

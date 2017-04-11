@@ -15,7 +15,7 @@ const InputView = React.createClass({
 
 
   checkboxChange: function(e){
-    console.log(this.refs.read.checked);
+    // console.log(this.refs.read.checked);
 
 
     if (this.refs.read.checked){
@@ -23,9 +23,6 @@ const InputView = React.createClass({
     }
 
   },
-
-
-
 
   render: function(){
     let hideClass = "hidden";
