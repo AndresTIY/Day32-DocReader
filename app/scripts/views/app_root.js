@@ -7,13 +7,14 @@ import PromptView from './prompt_view'
 const App = React.createClass({
 
 
+  //iChecked corresponds to state
 
   render: function () {
     let divClass = 'show-content';
     if (!this.props.iChecked){
       divClass = 'hidden';
     }
-    //iChecked corresponds to state
+
 
 
 

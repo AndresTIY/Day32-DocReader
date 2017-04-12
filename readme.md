@@ -11,12 +11,12 @@
 ### Checkboxes!
 - [x] Create views for document
 - [x] Create a "Mark as Read" checkbox
-- [ ] Checkbox Actions when checked:
+- [X] Checkbox Actions when checked:
   - [X] Prompt for confirm
     - [X] Two Options, Cancel and confirm
-      - [ ] Cancel closes prompt window, checkbox is unchecked
-      - [ ] Confirm closes AND disables checkbox
-- [ ] Use multiple react components
+      - [X] Cancel closes prompt window, checkbox is unchecked
+      - [X] Confirm closes AND disables checkbox
+- [X] Use multiple react components
 - [X] Use Reducer and Actions
 
 

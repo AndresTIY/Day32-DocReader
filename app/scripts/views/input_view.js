@@ -2,7 +2,7 @@ import React from 'react'
 import reducer from '../reducers/reducer.js'
 import store from '../store.js'
 import { connect } from 'react-redux'
-
+import allState from '../containers/all'
 
 
 // checkedAction = function () {
@@ -27,7 +27,8 @@ const InputView = React.createClass({
 
   render: function(){
 
-    let hideClass = "hidden";
+    let readClass = "hidden";
+    let markClass;
     let boo = false
     let checkDisplay = false;
 
@@ -35,10 +36,17 @@ const InputView = React.createClass({
       checkDisplay = false;
     }
 
+    if (this.props.confirm){
+      readClass = "";
+      markClass = "hidden";
+      boo = true;
+      checkDisplay = true;
+    }
+
     return (
       <div className="inputDiv">
-        <label className="">Mark as Read</label>
-        <label className={hideClass}>Read</label>
+        <label className={markClass}>Mark as Read</label>
+        <label className={readClass}>Read</label>
         <input checked={checkDisplay} ref="read" id="input" type="checkbox"
         disabled={boo} onClick={this.checkboxChange} value="">
         </input>
@@ -48,4 +56,5 @@ const InputView = React.createClass({
 
 })
 
-export default InputView;
+// export default InputView;
+export default connect(allState)(InputView)

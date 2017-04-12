@@ -1,21 +1,21 @@
 import React from 'react'
 import allState from '../containers/all.js'
 import store from '../store.js'
+import { connect } from 'react-redux'
+
 
 
 
 
 const PromptView = React.createClass({
   confirm: function(){
-    console.log('confirmed');
-
+    console.log('confirm clicked');
+    store.dispatch({type:"CONFIRM"})
 
   },
 
   cancel: function(){
-
     store.dispatch({type:"CANCEL"})
-
   },
 
 
@@ -38,4 +38,5 @@ const PromptView = React.createClass({
 
 })
 
-export default PromptView;
+// export default PromptView;
+export default connect(allState)(PromptView)

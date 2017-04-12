@@ -16,22 +16,18 @@ export default function reducer (currentState, action) {
 
   switch(action.type){
     case "CHECKED":
-    //bring up pop up window
-      console.log("Checked type dispatched");
-
       return Object.assign({}, currentState, {
         iChecked: !currentState.iChecked
       });
 
     case "CONFIRM":
-    //disables checkbox
       console.log("Confirm type dispatched");
       return Object.assign({}, currentState, {
+        iChecked: !currentState.iChecked,
+        confirm: !currentState.confirm
       });
 
     case "CANCEL":
-      //hides pop up window
-      console.log("Cancel type dispatched");
       return Object.assign({}, currentState, {
         iChecked: !currentState.iChecked,
         cancel: !currentState.cancel
