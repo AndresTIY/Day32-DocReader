@@ -1,7 +1,8 @@
 import React from 'react'
-// import checkbox from '../actions/checkbox.js'
 import reducer from '../reducers/reducer.js'
 import store from '../store.js'
+import { connect } from 'react-redux'
+
 
 
 // checkedAction = function () {
@@ -15,27 +16,31 @@ const InputView = React.createClass({
 
 
   checkboxChange: function(e){
-    // console.log(this.refs.read.checked);
+    let isChecked = this.refs.read.checked;//corresponds to actual check
 
-
-    if (this.refs.read.checked){
+    if (isChecked){
       store.dispatch({type: "CHECKED"})
     }
+
 
   },
 
   render: function(){
-    let hideClass = "hidden";
-    // var checkedValue = document.querySelector('#input:checked').value;
-    // console.log(checkedValue);
-    let boo = false
 
+    let hideClass = "hidden";
+    let boo = false
+    let checkDisplay = false;
+
+    if (this.props.cancel) {
+      checkDisplay = false;
+    }
 
     return (
       <div className="inputDiv">
         <label className="">Mark as Read</label>
         <label className={hideClass}>Read</label>
-        <input ref="read" id="input" type="checkbox" disabled={boo} onClick={this.checkboxChange} value="">
+        <input checked={checkDisplay} ref="read" id="input" type="checkbox"
+        disabled={boo} onClick={this.checkboxChange} value="">
         </input>
       </div>
     )

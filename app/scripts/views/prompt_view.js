@@ -1,14 +1,22 @@
 import React from 'react'
 import allState from '../containers/all.js'
+import store from '../store.js'
+
 
 
 
 const PromptView = React.createClass({
-  // constructor(props){
-  //   super(props)
-  //   this.state = {isModalOpen: false}
-  // }
+  confirm: function(){
+    console.log('confirmed');
 
+
+  },
+
+  cancel: function(){
+
+    store.dispatch({type:"CANCEL"})
+
+  },
 
 
 
@@ -20,8 +28,8 @@ const PromptView = React.createClass({
 
         <div className="modal">
           <p>Are you sure you read this?</p>
-          <button>Confirm</button>
-          <button>Cancel</button>
+          <button onClick={this.confirm}>Confirm</button>
+          <button onClick={this.cancel}>Cancel</button>
         </div>
       </div>
 

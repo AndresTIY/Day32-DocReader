@@ -4,7 +4,9 @@ import logger from '../middleware/logger.js'
 import store from '../store.js'
 
 const initialState = {
-  checked: true
+  iChecked: true,
+  confirm: false,
+  cancel: false,
 }
 
 export default function reducer (currentState, action) {
@@ -18,7 +20,7 @@ export default function reducer (currentState, action) {
       console.log("Checked type dispatched");
 
       return Object.assign({}, currentState, {
-        checked: !currentState.checked
+        iChecked: !currentState.iChecked
       });
 
     case "CONFIRM":
@@ -31,6 +33,8 @@ export default function reducer (currentState, action) {
       //hides pop up window
       console.log("Cancel type dispatched");
       return Object.assign({}, currentState, {
+        iChecked: !currentState.iChecked,
+        cancel: !currentState.cancel
       });
 
     default:

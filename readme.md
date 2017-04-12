@@ -12,12 +12,12 @@
 - [x] Create views for document
 - [x] Create a "Mark as Read" checkbox
 - [ ] Checkbox Actions when checked:
-  - [ ] Prompt for confirm
-    - [ ] Two Options, Cancel and confirm
+  - [X] Prompt for confirm
+    - [X] Two Options, Cancel and confirm
       - [ ] Cancel closes prompt window, checkbox is unchecked
       - [ ] Confirm closes AND disables checkbox
 - [ ] Use multiple react components
-- [ ] Use Reducer and Actions
+- [X] Use Reducer and Actions
 
 
 - Action Types?
